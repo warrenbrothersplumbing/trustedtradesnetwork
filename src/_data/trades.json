@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Plumbing",
+    "slug": "plumbing",
+    "icon": "🔧",
+    "description": "Licensed plumbers for repairs, installations, and emergency services"
+  },
+  {
+    "name": "Electrical",
+    "slug": "electrical",
+    "icon": "⚡",
+    "description": "Certified electricians for residential and commercial work"
+  },
+  {
+    "name": "HVAC",
+    "slug": "hvac",
+    "icon": "❄️",
+    "description": "Heating, ventilation, and air conditioning specialists"
+  },
+  {
+    "name": "Roofing",
+    "slug": "roofing",
+    "icon": "🏠",
+    "description": "Professional roofing installation and repair"
+  },
+  {
+    "name": "Landscaping",
+    "slug": "landscaping",
+    "icon": "🌳",
+    "description": "Lawn care, design, and outdoor living spaces"
+  }
+]

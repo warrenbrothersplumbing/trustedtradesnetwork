@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Warren Brothers Plumbing",
+    "slug": "warren-brothers-plumbing",
+    "trade": "Plumbing",
+    "phone": "(512) 555-1234",
+    "website": "https://warrenbrothersplumbing.com",
+    "googleReviews": "https://g.page/warrenbrothersplumbing",
+    "rating": 4.9,
+    "reviewCount": 127,
+    "tagline": "Family-owned plumbing experts serving Austin since 2005",
+    "bio": "Warren Brothers Plumbing is a family-owned and operated plumbing company serving the Greater Austin area. With nearly two decades of experience, they specialize in residential plumbing repairs, water heater installation, drain cleaning, and emergency services. Known for their honest pricing and reliable service, they treat every home like their own.",
+    "services": [
+      "Emergency Plumbing",
+      "Water Heater Installation",
+      "Drain Cleaning",
+      "Leak Detection",
+      "Fixture Installation"
+    ],
+    "featured": true
+  }
+]

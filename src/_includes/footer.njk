@@ -1,0 +1,37 @@
+<footer class="bg-gray-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🛡️</span>
+          <span class="text-xl font-bold">Trusted Trades Network</span>
+        </div>
+        <p class="text-gray-400">
+          Vetted tradespeople in the Greater Austin area. Licensed, insured, and highly rated.
+        </p>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="/trades/" class="hover:text-white transition-colors">Find a Trade</a></li>
+          <li><a href="/join/" class="hover:text-white transition-colors">Join the Network</a></li>
+          <li><a href="/apply/" class="hover:text-white transition-colors">Apply Now</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Our Trades</h3>
+        <ul class="space-y-2 text-gray-400">
+          {% for trade in trades %}
+          <li><a href="/trades/#{{ trade.slug }}" class="hover:text-white transition-colors">{{ trade.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+      <p>&copy; {{ page.date | date: "%Y" }} Trusted Trades Network. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

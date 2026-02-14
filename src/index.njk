@@ -1,0 +1,94 @@
+---
+layout: base.njk
+title: Home
+---
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+    <div class="text-center max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">
+        Trusted Trades Network
+      </h1>
+      <p class="text-xl md:text-2xl text-primary-100 mb-8">
+        {{ site.tagline }}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/trades/" class="btn-primary bg-white text-primary-700 hover:bg-gray-100">
+          Find a Trade
+        </a>
+        <a href="/join/" class="btn-secondary border-white text-white hover:bg-primary-700">
+          Join the Network
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-16 lg:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">How It Works</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+      We do the homework so you don't have to. Every tradesperson in our network meets strict standards.
+    </p>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-3xl">✅</span>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Licensed & Insured</h3>
+        <p class="text-gray-600">Every trade in our network carries proper licensing and insurance coverage.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-3xl">⭐</span>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">4.5+ Star Rating</h3>
+        <p class="text-gray-600">We only accept trades with 4.5 stars or higher on Google Reviews.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-3xl">📍</span>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Local to Austin</h3>
+        <p class="text-gray-600">All our trades are local businesses serving the Greater Austin area.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Trades -->
+<section class="py-16 lg:py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Browse by Trade</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+      Select a category to find trusted professionals in your area.
+    </p>
+    
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      {% for trade in trades %}
+      <a href="/trades/#{{ trade.slug }}" class="card text-center hover:border-primary-500 border-2 border-transparent">
+        <span class="text-4xl mb-3 block">{{ trade.icon }}</span>
+        <h3 class="font-semibold text-gray-900">{{ trade.name }}</h3>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 lg:py-24 bg-primary-700 text-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Are You a Trusted Trade?</h2>
+    <p class="text-xl text-primary-100 mb-8">
+      Join our network of vetted professionals and connect with homeowners who value quality work.
+    </p>
+    <a href="/join/" class="btn-primary bg-white text-primary-700 hover:bg-gray-100">
+      Apply to Join
+    </a>
+  </div>
+</section>

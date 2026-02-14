@@ -1,0 +1,88 @@
+---
+layout: base.njk
+title: Warren Brothers Plumbing
+description: Family-owned plumbing experts serving Austin since 2005. Licensed, insured, and highly rated.
+---
+
+{% set company = companies | selectattr("slug", "equalto", "warren-brothers-plumbing") | first %}
+
+<section class="py-12 lg:py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 mb-8">
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
+        <div>
+          <div class="flex items-center gap-2 text-primary-600 text-sm font-semibold mb-2">
+            <span>🔧</span> Plumbing
+          </div>
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{{ company.name }}</h1>
+          <p class="text-xl text-gray-600">{{ company.tagline }}</p>
+        </div>
+        <div class="flex items-center gap-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full font-bold text-lg">
+          ⭐ {{ company.rating }} <span class="text-sm font-normal">({{ company.reviewCount }} reviews)</span>
+        </div>
+      </div>
+      
+      <!-- Contact Info -->
+      <div class="grid sm:grid-cols-3 gap-4 p-4 bg-gray-50 rounded-xl">
+        <a href="tel:{{ company.phone }}" class="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+          <span class="text-2xl">📞</span>
+          <div>
+            <div class="text-xs text-gray-500">Call Now</div>
+            <div class="font-semibold text-gray-900">{{ company.phone }}</div>
+          </div>
+        </a>
+        <a href="{{ company.website }}" target="_blank" class="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+          <span class="text-2xl">🌐</span>
+          <div>
+            <div class="text-xs text-gray-500">Website</div>
+            <div class="font-semibold text-primary-600">Visit Site →</div>
+          </div>
+        </a>
+        <a href="{{ company.googleReviews }}" target="_blank" class="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+          <span class="text-2xl">⭐</span>
+          <div>
+            <div class="text-xs text-gray-500">Google Reviews</div>
+            <div class="font-semibold text-primary-600">Read Reviews →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <!-- About -->
+    <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 mb-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">About {{ company.name }}</h2>
+      <p class="text-gray-700 leading-relaxed">{{ company.bio }}</p>
+    </div>
+    
+    <!-- Services -->
+    <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 mb-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Services Offered</h2>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {% for service in company.services %}
+        <div class="flex items-center gap-3 p-3 bg-primary-50 rounded-lg">
+          <span class="text-primary-600">✓</span>
+          <span class="font-medium text-gray-900">{{ service }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <!-- Trusted Badge -->
+    <div class="bg-gradient-to-br from-primary-600 to-primary-800 text-white rounded-2xl p-8 text-center">
+      <div class="text-4xl mb-4">🛡️</div>
+      <h3 class="text-xl font-bold mb-2">Trusted Trades Verified</h3>
+      <p class="text-primary-100">
+        This company has been vetted by Trusted Trades Network. They are licensed, insured, and maintain excellent customer reviews.
+      </p>
+    </div>
+    
+    <!-- Back Link -->
+    <div class="mt-8 text-center">
+      <a href="/trades/#plumbing" class="text-primary-600 hover:text-primary-700 font-medium">
+        ← Back to Plumbing Directory
+      </a>
+    </div>
+  </div>
+</section>

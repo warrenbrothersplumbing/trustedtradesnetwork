@@ -1,0 +1,158 @@
+---
+layout: base.njk
+title: Apply to Join
+description: Submit your application to join the Trusted Trades Network.
+---
+
+<section class="py-12 lg:py-20">
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Apply to Join</h1>
+      <p class="text-xl text-gray-600">
+        Fill out the form below and we'll review your application.
+      </p>
+    </div>
+    
+    <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+        
+        <div>
+          <label for="company_name" class="form-label">Company Name *</label>
+          <input 
+            type="text" 
+            id="company_name" 
+            name="company_name" 
+            required 
+            class="form-input"
+            placeholder="Your Company Name"
+          >
+        </div>
+        
+        <div>
+          <label for="trade" class="form-label">Trade / Service Type *</label>
+          <select id="trade" name="trade" required class="form-input">
+            <option value="">Select your trade...</option>
+            <option value="Plumbing">Plumbing</option>
+            <option value="Electrical">Electrical</option>
+            <option value="HVAC">HVAC</option>
+            <option value="Roofing">Roofing</option>
+            <option value="Landscaping">Landscaping</option>
+            <option value="General Contractor">General Contractor</option>
+            <option value="Painting">Painting</option>
+            <option value="Flooring">Flooring</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        
+        <div>
+          <label for="contact_name" class="form-label">Contact Person Name *</label>
+          <input 
+            type="text" 
+            id="contact_name" 
+            name="contact_name" 
+            required 
+            class="form-input"
+            placeholder="John Smith"
+          >
+        </div>
+        
+        <div>
+          <label for="phone" class="form-label">Phone Number *</label>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            required 
+            class="form-input"
+            placeholder="(512) 555-1234"
+          >
+        </div>
+        
+        <div>
+          <label for="email" class="form-label">Email Address *</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required 
+            class="form-input"
+            placeholder="you@yourcompany.com"
+          >
+        </div>
+        
+        <div>
+          <label for="website" class="form-label">Website</label>
+          <input 
+            type="url" 
+            id="website" 
+            name="website" 
+            class="form-input"
+            placeholder="https://yourcompany.com"
+          >
+        </div>
+        
+        <div>
+          <label for="license_number" class="form-label">License Number *</label>
+          <input 
+            type="text" 
+            id="license_number" 
+            name="license_number" 
+            required 
+            class="form-input"
+            placeholder="Your trade license number"
+          >
+        </div>
+        
+        <div>
+          <label for="google_reviews" class="form-label">Google Business Profile URL</label>
+          <input 
+            type="url" 
+            id="google_reviews" 
+            name="google_reviews" 
+            class="form-input"
+            placeholder="https://g.page/yourbusiness"
+          >
+        </div>
+        
+        <div>
+          <label for="message" class="form-label">Tell us about your business</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="4" 
+            class="form-input"
+            placeholder="How long have you been in business? What areas do you serve? What makes your company stand out?"
+          ></textarea>
+        </div>
+        
+        <!-- Criteria confirmation -->
+        <div class="bg-gray-50 rounded-lg p-4 space-y-3">
+          <p class="font-semibold text-gray-900">Please confirm:</p>
+          
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" name="confirm_local" required class="mt-1 w-4 h-4 text-primary-600">
+            <span class="text-sm text-gray-700">I confirm that my business serves the Greater Austin area</span>
+          </label>
+          
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" name="confirm_licensed" required class="mt-1 w-4 h-4 text-primary-600">
+            <span class="text-sm text-gray-700">I confirm that my business is licensed and insured</span>
+          </label>
+          
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" name="confirm_rating" required class="mt-1 w-4 h-4 text-primary-600">
+            <span class="text-sm text-gray-700">I confirm that my business maintains 4.5+ stars on Google</span>
+          </label>
+        </div>
+        
+        <button type="submit" class="btn-primary w-full">
+          Submit Application
+        </button>
+        
+        <p class="text-sm text-gray-500 text-center">
+          We'll review your application and get back to you within 3-5 business days.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+{
+  "name": "trusted-trades-network",
+  "version": "1.0.0",
+  "description": "Vetted trades directory for the Greater Austin area",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve --watch",
+    "build": "npx tailwindcss -i ./src/assets/css/styles.css -o ./_site/assets/css/styles.css && npx @11ty/eleventy",
+    "build:css": "npx tailwindcss -i ./src/assets/css/styles.css -o ./_site/assets/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "tailwindcss": "^3.4.1"
+  }
+}

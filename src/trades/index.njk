@@ -1,0 +1,122 @@
+---
+layout: base.njk
+title: Find a Trade
+description: Browse our directory of vetted tradespeople in the Greater Austin area.
+---
+
+<section class="py-12 lg:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Find a Trade</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Browse our directory of vetted, licensed, and highly-rated tradespeople.
+      </p>
+    </div>
+    
+    <!-- Trade Tabs -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12" id="trade-tabs">
+      {% for trade in trades %}
+      <button 
+        class="trade-tab {% if loop.first %}trade-tab-active{% else %}trade-tab-inactive{% endif %}"
+        data-trade="{{ trade.slug }}"
+        onclick="showTrade('{{ trade.slug }}')"
+      >
+        {{ trade.icon }} {{ trade.name }}
+      </button>
+      {% endfor %}
+    </div>
+    
+    <!-- Trade Sections -->
+    {% for trade in trades %}
+    <div id="{{ trade.slug }}" class="trade-section {% if not loop.first %}hidden{% endif %}">
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+          <span class="text-3xl">{{ trade.icon }}</span>
+          {{ trade.name }}
+        </h2>
+        <p class="text-gray-600 mt-2">{{ trade.description }}</p>
+      </div>
+      
+      {% set tradeCompanies = companies | filterByTrade(trade.name) %}
+      
+      {% if tradeCompanies.length > 0 %}
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for company in tradeCompanies %}
+        <div class="card border-2 border-gray-100">
+          <div class="flex items-start justify-between mb-4">
+            <h3 class="text-xl font-bold text-gray-900">{{ company.name }}</h3>
+            <div class="flex items-center gap-1 bg-amber-100 text-amber-700 px-2 py-1 rounded-full text-sm font-semibold">
+              ⭐ {{ company.rating }}
+            </div>
+          </div>
+          
+          <p class="text-gray-600 mb-4">{{ company.tagline }}</p>
+          
+          <div class="space-y-2 text-sm">
+            <a href="tel:{{ company.phone }}" class="flex items-center gap-2 text-gray-700 hover:text-primary-600">
+              <span>📞</span> {{ company.phone }}
+            </a>
+            <a href="{{ company.website }}" target="_blank" class="flex items-center gap-2 text-gray-700 hover:text-primary-600">
+              <span>🌐</span> Visit Website
+            </a>
+            <a href="{{ company.googleReviews }}" target="_blank" class="flex items-center gap-2 text-gray-700 hover:text-primary-600">
+              <span>⭐</span> {{ company.reviewCount }} Google Reviews
+            </a>
+          </div>
+          
+          <div class="mt-6 pt-4 border-t border-gray-100">
+            <a href="/companies/{{ company.slug }}/" class="btn-primary w-full text-center">
+              View Profile
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="text-center py-12 bg-white rounded-xl border-2 border-dashed border-gray-200">
+        <span class="text-4xl mb-4 block">🔍</span>
+        <h3 class="text-xl font-semibold text-gray-700 mb-2">Coming Soon</h3>
+        <p class="text-gray-500">We're currently vetting {{ trade.name | lower }} professionals for our network.</p>
+        <a href="/join/" class="text-primary-600 hover:text-primary-700 font-medium mt-4 inline-block">
+          Know a great {{ trade.name | lower }} pro? Let them know about us →
+        </a>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+function showTrade(slug) {
+  // Hide all sections
+  document.querySelectorAll('.trade-section').forEach(section => {
+    section.classList.add('hidden');
+  });
+  
+  // Show selected section
+  document.getElementById(slug).classList.remove('hidden');
+  
+  // Update tab styles
+  document.querySelectorAll('.trade-tab').forEach(tab => {
+    if (tab.dataset.trade === slug) {
+      tab.classList.remove('trade-tab-inactive');
+      tab.classList.add('trade-tab-active');
+    } else {
+      tab.classList.remove('trade-tab-active');
+      tab.classList.add('trade-tab-inactive');
+    }
+  });
+  
+  // Update URL hash
+  history.pushState(null, null, '#' + slug);
+}
+
+// Handle direct navigation to hash
+document.addEventListener('DOMContentLoaded', function() {
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    showTrade(hash);
+  }
+});
+</script>

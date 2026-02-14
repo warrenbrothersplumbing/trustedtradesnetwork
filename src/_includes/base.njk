@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | {{ site.name }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col">
+  {% include "header.njk" %}
+  
+  <main class="flex-grow">
+    {{ content | safe }}
+  </main>
+  
+  {% include "footer.njk" %}
+</body>
+</html>
