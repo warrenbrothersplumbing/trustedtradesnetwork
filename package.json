@@ -4,7 +4,7 @@
   "description": "Vetted trades directory for the Greater Austin area",
   "scripts": {
     "dev": "npx @11ty/eleventy --serve --watch",
-    "build": "npx tailwindcss -i ./src/assets/css/styles.css -o ./_site/assets/css/styles.css && npx @11ty/eleventy",
+    "build": "npx @11ty/eleventy && npx tailwindcss -i ./src/assets/css/styles.css -o ./_site/assets/css/styles.css --minify",
     "build:css": "npx tailwindcss -i ./src/assets/css/styles.css -o ./_site/assets/css/styles.css --watch"
   },
   "devDependencies": {
