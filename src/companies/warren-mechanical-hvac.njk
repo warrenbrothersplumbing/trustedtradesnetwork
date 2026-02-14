@@ -34,7 +34,7 @@ description: Your local HVAC experts in Williamson County — 24/7 emergency ser
             <div class="font-semibold text-gray-900">{{ company.phone }}</div>
           </div>
         </a>
-        <a href="{{ company.website }}" target="_blank" class="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+        <a href="{{ company.website }}" target="_blank" data-company="{{ company.slug }}" data-track-website class="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
           <span class="text-2xl">🌐</span>
           <div>
             <div class="text-xs text-gray-500">Website</div>

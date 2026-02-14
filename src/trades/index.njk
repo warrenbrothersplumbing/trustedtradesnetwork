@@ -56,7 +56,7 @@ description: Browse our directory of vetted tradespeople in the Greater Austin a
             <a href="tel:{{ company.phone }}" data-company="{{ company.slug }}" class="flex items-center gap-2 text-gray-700 hover:text-primary-600">
               <span>📞</span> {{ company.phone }}
             </a>
-            <a href="{{ company.website }}" target="_blank" class="flex items-center gap-2 text-gray-700 hover:text-primary-600">
+            <a href="{{ company.website }}" target="_blank" data-company="{{ company.slug }}" data-track-website class="flex items-center gap-2 text-gray-700 hover:text-primary-600">
               <span>🌐</span> Visit Website
             </a>
             <a href="{{ company.googleReviews }}" target="_blank" class="flex items-center gap-2 text-gray-700 hover:text-primary-600">
