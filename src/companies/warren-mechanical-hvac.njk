@@ -4,7 +4,7 @@ title: Warren Mechanical HVAC
 description: Your local HVAC experts in Williamson County — 24/7 emergency service. Licensed, insured, and highly rated.
 ---
 
-{% set company = companies | selectattr("slug", "equalto", "warren-mechanical-hvac") | first %}
+{% set company = companies | getCompanyBySlug("warren-mechanical-hvac") %}
 
 <section class="py-12 lg:py-20">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

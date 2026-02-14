@@ -13,6 +13,11 @@ module.exports = function(eleventyConfig) {
     return companies.filter(c => c.trade.toLowerCase() === trade.toLowerCase());
   });
 
+  // Filter to get company by slug
+  eleventyConfig.addFilter("getCompanyBySlug", function(companies, slug) {
+    return companies.find(c => c.slug === slug);
+  });
+
   return {
     dir: {
       input: "src",

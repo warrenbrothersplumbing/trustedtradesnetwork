@@ -4,7 +4,7 @@ title: Warren Brothers Plumbing
 description: Family-owned plumbing experts serving Austin since 2005. Licensed, insured, and highly rated.
 ---
 
-{% set company = companies | selectattr("slug", "equalto", "warren-brothers-plumbing") | first %}
+{% set company = companies | getCompanyBySlug("warren-brothers-plumbing") %}
 
 <section class="py-12 lg:py-20">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
