@@ -32,14 +32,15 @@
     "license": "Licensed & Insured",
     "rating": 4.9,
     "reviewCount": 90,
-    "tagline": "Your local HVAC experts in Williamson County — 24/7 emergency service",
-    "bio": "Warren Mechanical HVAC is a trusted HVAC contractor serving Williamson County, Austin, and surrounding areas. They provide dependable heating and cooling solutions built for Texas homes, with 24/7 emergency service availability. Their team offers rapid response, expert technicians, transparent pricing with no hidden fees, and a commitment to customer comfort. No gimmicks, no fine print, no bait and switch — just reliable HVAC service you can count on.",
+    "tagline": "Your trusted HVAC partner in Williamson County — 24/7 emergency service available",
+    "bio": "When the Texas heat hits hard, you need a reliable HVAC partner to keep your cool. Warren Mechanical HVAC provides reliable air conditioning, HVAC repair, and heating services designed to support everyday comfort. Serving Austin, Elgin, Paige, Round Rock, and Williamson County, they ensure your comfort is their top priority. Their services include air systems for air quality, heating, ventilation, and energy efficient operation. They offer ductless systems, heat pumps, and smart thermostats for better efficiency and savings. As a full-service HVAC company, they provide ongoing maintenance to extend system life and reduce unexpected breakdowns. With 24/7 emergency service and expert technicians ready to tackle any issue, you can trust Warren Mechanical to keep your home comfortable when you need it most.",
     "services": [
-      "AC Repair",
-      "AC Installation",
-      "Heating Repair",
-      "Furnace Installation",
+      "AC Repair & Installation",
+      "Heating Repair & Installation",
+      "Heat Pump Services",
+      "Ductless Systems",
       "HVAC Maintenance",
+      "Smart Thermostat Installation",
       "24/7 Emergency Service"
     ],
     "featured": true
