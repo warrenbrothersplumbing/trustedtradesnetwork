@@ -53,7 +53,7 @@ description: Browse our directory of vetted tradespeople in the Greater Austin a
           <p class="text-gray-600 mb-4">{{ company.tagline }}</p>
           
           <div class="space-y-2 text-sm">
-            <a href="tel:{{ company.phone }}" class="flex items-center gap-2 text-gray-700 hover:text-primary-600">
+            <a href="tel:{{ company.phone }}" data-company="{{ company.slug }}" class="flex items-center gap-2 text-gray-700 hover:text-primary-600">
               <span>📞</span> {{ company.phone }}
             </a>
             <a href="{{ company.website }}" target="_blank" class="flex items-center gap-2 text-gray-700 hover:text-primary-600">
