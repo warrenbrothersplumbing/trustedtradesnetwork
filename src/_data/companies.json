@@ -3,19 +3,22 @@
     "name": "Warren Brothers Plumbing",
     "slug": "warren-brothers-plumbing",
     "trade": "Plumbing",
-    "phone": "(512) 555-1234",
+    "phone": "(512) 764-0866",
     "website": "https://warrenbrothersplumbing.com",
-    "googleReviews": "https://g.page/warrenbrothersplumbing",
-    "rating": 4.9,
-    "reviewCount": 127,
-    "tagline": "Family-owned plumbing experts serving Austin since 2005",
-    "bio": "Warren Brothers Plumbing is a family-owned and operated plumbing company serving the Greater Austin area. With nearly two decades of experience, they specialize in residential plumbing repairs, water heater installation, drain cleaning, and emergency services. Known for their honest pricing and reliable service, they treat every home like their own.",
+    "googleReviews": "https://www.google.com/maps/place/Warren+Brothers+Plumbing",
+    "license": "Texas License #RMP 12617",
+    "rating": 5.0,
+    "reviewCount": 50,
+    "tagline": "Trusted plumbing services in Central Texas — led by a plumber with 10+ years experience",
+    "bio": "Warren Brothers Plumbing is the trusted choice for homeowners and businesses throughout Central Texas. Led by a plumber with over 10 years of industry experience, they're committed to quality workmanship, honest pricing, and exceptional customer service. They provide upfront estimates before work begins, are fully licensed and insured, and offer same-day service for most repairs. Serving Bastrop, Austin, Elgin, and surrounding communities.",
     "services": [
-      "Emergency Plumbing",
+      "Water Heater Repair",
       "Water Heater Installation",
-      "Drain Cleaning",
-      "Leak Detection",
-      "Fixture Installation"
+      "Tankless Water Heaters",
+      "Plumbing Repairs",
+      "Leak Repair",
+      "Emergency Service",
+      "Tele-Plumb (Virtual Support)"
     ],
     "featured": true
   }
