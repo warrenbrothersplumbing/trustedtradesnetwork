@@ -4,23 +4,28 @@ title: Home
 ---
 
 <!-- Hero Section -->
-<section class="bg-gradient-to-br from-primary-600 to-primary-800 text-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+<section class="bg-primary-900 text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23d4af37" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-40 relative">
     <div class="text-center max-w-3xl mx-auto">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">
+      <div class="w-20 h-1 bg-gold-500 mx-auto mb-8"></div>
+      <h1 class="heading-elegant text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
         Trusted Trades Network
       </h1>
-      <p class="text-xl md:text-2xl text-primary-100 mb-8">
+      <p class="text-xl md:text-2xl text-primary-300 mb-10 font-light">
         {{ site.tagline }}
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/trades/" class="btn-primary bg-white text-primary-700 hover:bg-gray-100">
+        <a href="/trades/" class="btn-primary">
           Find a Trade
         </a>
-        <a href="/join/" class="btn-secondary border-white text-white hover:bg-primary-700">
+        <a href="/join/" class="btn-secondary">
           Join the Network
         </a>
       </div>
+      <div class="w-20 h-1 bg-gold-500 mx-auto mt-12"></div>
     </div>
   </div>
 </section>
@@ -28,50 +33,50 @@ title: Home
 <!-- How It Works -->
 <section class="py-16 lg:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">How It Works</h2>
+    <h2 class="heading-elegant text-3xl md:text-4xl font-bold text-center mb-4 text-primary-900">How It Works</h2>
     <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
       We do the homework so you don't have to. Every tradesperson in our network meets strict standards.
     </p>
     
     <div class="grid md:grid-cols-3 gap-8">
       <div class="text-center">
-        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="w-16 h-16 bg-primary-900 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold mb-2">Licensed & Insured</h3>
-        <p class="text-gray-600">Every trade in our network carries proper licensing and insurance coverage.</p>
+        <h3 class="text-xl font-semibold mb-2 text-primary-900">Licensed & Insured</h3>
+        <p class="text-primary-600">Every trade in our network carries proper licensing and insurance coverage.</p>
       </div>
       
       <div class="text-center">
-        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="w-16 h-16 bg-primary-900 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold mb-2">4.5+ Star Rating</h3>
-        <p class="text-gray-600">We only accept trades with 4.5 stars or higher on Google Reviews.</p>
+        <h3 class="text-xl font-semibold mb-2 text-primary-900">4.5+ Star Rating</h3>
+        <p class="text-primary-600">We only accept trades with 4.5 stars or higher on Google Reviews.</p>
       </div>
       
       <div class="text-center">
-        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="w-16 h-16 bg-primary-900 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
           </svg>
         </div>
-        <h3 class="text-xl font-semibold mb-2">Local to Austin</h3>
-        <p class="text-gray-600">All our trades are local businesses serving the Greater Austin area.</p>
+        <h3 class="text-xl font-semibold mb-2 text-primary-900">Local to Austin</h3>
+        <p class="text-primary-600">All our trades are local businesses serving the Greater Austin area.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Featured Trades -->
-<section class="py-16 lg:py-24 bg-gray-50">
+<section class="py-16 lg:py-24 bg-primary-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Browse by Trade</h2>
+    <h2 class="heading-elegant text-3xl md:text-4xl font-bold text-center mb-4 text-primary-900">Browse by Trade</h2>
     <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
       Select a category to find trusted professionals in your area.
     </p>
@@ -88,13 +93,14 @@ title: Home
 </section>
 
 <!-- CTA Section -->
-<section class="py-16 lg:py-24 bg-primary-700 text-white">
+<section class="py-16 lg:py-24 bg-primary-900 text-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">Are You a Trusted Trade?</h2>
-    <p class="text-xl text-primary-100 mb-8">
+    <div class="w-20 h-1 bg-gold-500 mx-auto mb-8"></div>
+    <h2 class="heading-elegant text-3xl md:text-4xl font-bold mb-4">Are You a Trusted Trade?</h2>
+    <p class="text-xl text-primary-300 mb-8">
       Join our network of vetted professionals and connect with homeowners who value quality work.
     </p>
-    <a href="/join/" class="btn-primary bg-white text-primary-700 hover:bg-gray-100">
+    <a href="/join/" class="btn-primary">
       Apply to Join
     </a>
   </div>
