@@ -21,5 +21,27 @@
       "Tele-Plumb (Virtual Support)"
     ],
     "featured": true
+  },
+  {
+    "name": "Warren Mechanical HVAC",
+    "slug": "warren-mechanical-hvac",
+    "trade": "HVAC",
+    "phone": "(346) 559-3433",
+    "website": "https://warrenmechanical.net",
+    "googleReviews": "https://maps.app.goo.gl/xBbsU5vx6tk1xwKX6",
+    "license": "Licensed & Insured",
+    "rating": 5.0,
+    "reviewCount": 25,
+    "tagline": "Your local HVAC experts in Williamson County — 24/7 emergency service",
+    "bio": "Warren Mechanical HVAC is a trusted HVAC contractor serving Williamson County, Austin, and surrounding areas. They provide dependable heating and cooling solutions built for Texas homes, with 24/7 emergency service availability. Their team offers rapid response, expert technicians, transparent pricing with no hidden fees, and a commitment to customer comfort. No gimmicks, no fine print, no bait and switch — just reliable HVAC service you can count on.",
+    "services": [
+      "AC Repair",
+      "AC Installation",
+      "Heating Repair",
+      "Furnace Installation",
+      "HVAC Maintenance",
+      "24/7 Emergency Service"
+    ],
+    "featured": true
   }
 ]
