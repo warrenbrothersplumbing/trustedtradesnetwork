@@ -28,5 +28,17 @@
     "slug": "landscaping",
     "icon": "🌳",
     "description": "Lawn care, design, and outdoor living spaces"
+  },
+  {
+    "name": "Water Remediation",
+    "slug": "water-remediation",
+    "icon": "💧",
+    "description": "Water damage restoration and mold remediation specialists"
+  },
+  {
+    "name": "Septic",
+    "slug": "septic",
+    "icon": "🚽",
+    "description": "Septic system installation, pumping, and repairs"
   }
 ]

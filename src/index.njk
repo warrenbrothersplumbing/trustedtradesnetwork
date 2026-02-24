@@ -113,9 +113,9 @@ title: Home
       Browse our hand-selected professionals. Every trade you see has earned — <em>not bought</em> — their place through proven excellence.
     </p>
     
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+    <div class="flex flex-wrap justify-center gap-4">
       {% for trade in trades %}
-      <a href="/trades/#{{ trade.slug }}" class="card text-center hover:border-primary-500 border-2 border-transparent">
+      <a href="/trades/#{{ trade.slug }}" class="card text-center hover:border-primary-500 border-2 border-transparent w-40">
         <span class="text-4xl mb-3 block">{{ trade.icon }}</span>
         <h3 class="font-semibold text-gray-900">{{ trade.name }}</h3>
       </a>
