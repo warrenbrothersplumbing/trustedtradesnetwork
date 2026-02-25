@@ -44,5 +44,28 @@
       "24/7 Emergency Service"
     ],
     "featured": true
+  },
+  {
+    "name": "24 Hour Flood Pros",
+    "slug": "24-hour-flood-pros",
+    "trade": "Water Remediation",
+    "phone": "(833) 243-5663",
+    "website": "https://24hourfloodpros.com",
+    "googleReviews": "https://www.google.com/maps/place/24+Hour+Flood+Pros",
+    "license": "Licensed & Insured",
+    "rating": 5.0,
+    "reviewCount": 50,
+    "tagline": "24/7 emergency flood cleanup and water damage restoration — fast, reliable service when you need it most",
+    "bio": "When you're experiencing a flood, fire, or mold emergency, the team at 24 Hour Flood Pros is there for you. With experienced technicians on hand ready to diagnose and repair your problem, they're available for emergencies 24/7 and can quickly and efficiently address any of your damage needs. From flash floods to severe water leaks, from storm damage to hidden water intrusions, their certified restoration experts are skilled in diagnosing and managing all forms of water damage and flooding incidents.",
+    "services": [
+      "Water Damage Restoration",
+      "Flood Cleanup",
+      "Mold Remediation",
+      "Fire Damage Restoration",
+      "Water Heater Services",
+      "Sump Pump Services",
+      "24/7 Emergency Response"
+    ],
+    "featured": true
   }
 ]

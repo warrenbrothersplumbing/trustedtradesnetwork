@@ -1,0 +1,76 @@
+---
+layout: base.njk
+title: 24 Hour Flood Pros - Water Remediation
+description: 24/7 emergency flood cleanup and water damage restoration — fast, reliable service when you need it most
+---
+
+{% set company = companies | getCompanyBySlug("24-hour-flood-pros") %}
+
+<section class="py-12 lg:py-16 bg-primary-900 text-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <span class="inline-block px-3 py-1 bg-gold-500 text-primary-900 text-sm font-semibold uppercase tracking-wider mb-4">{{ company.trade }}</span>
+      <h1 class="heading-elegant text-4xl md:text-5xl font-bold mb-4">{{ company.name }}</h1>
+      <p class="text-xl text-primary-300">{{ company.tagline }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-12 lg:py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <a href="tel:{{ company.phone | replace('(', '') | replace(')', '') | replace(' ', '') | replace('-', '') }}" 
+         class="card text-center hover:border-primary-500 border-2 border-transparent"
+         data-track-phone data-company="{{ company.slug }}">
+        <span class="text-3xl mb-2 block">📞</span>
+        <h3 class="font-semibold text-gray-900">Call Now</h3>
+        <p class="text-primary-600">{{ company.phone }}</p>
+      </a>
+      
+      <a href="{{ company.website }}" target="_blank" rel="noopener noreferrer" 
+         class="card text-center hover:border-primary-500 border-2 border-transparent"
+         data-track-website data-company="{{ company.slug }}">
+        <span class="text-3xl mb-2 block">🌐</span>
+        <h3 class="font-semibold text-gray-900">Visit Website</h3>
+        <p class="text-primary-600">{{ company.website | replace('https://', '') }}</p>
+      </a>
+      
+      <a href="{{ company.googleReviews }}" target="_blank" rel="noopener noreferrer" 
+         class="card text-center hover:border-primary-500 border-2 border-transparent">
+        <span class="text-3xl mb-2 block">⭐</span>
+        <h3 class="font-semibold text-gray-900">{{ company.rating }} Stars</h3>
+        <p class="text-primary-600">{{ company.reviewCount }} Google Reviews</p>
+      </a>
+    </div>
+    
+    <div class="bg-primary-50 p-8 border-l-4 border-gold-500 mb-12">
+      <h2 class="heading-elegant text-2xl font-bold text-primary-900 mb-4">About {{ company.name }}</h2>
+      <p class="text-primary-700 leading-relaxed">{{ company.bio }}</p>
+      <p class="text-sm text-primary-600 mt-4">{{ company.license }}</p>
+    </div>
+    
+    <div>
+      <h2 class="heading-elegant text-2xl font-bold text-primary-900 mb-6">Services</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        {% for service in company.services %}
+        <div class="flex items-center gap-3 p-4 bg-white border border-gray-200">
+          <span class="text-gold-500">✓</span>
+          <span class="text-primary-700">{{ service }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-12 lg:py-16 bg-primary-900 text-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="heading-elegant text-2xl font-bold mb-4">Ready to Get Started?</h2>
+    <p class="text-primary-300 mb-8">Contact {{ company.name }} today for fast, reliable service.</p>
+    <a href="tel:{{ company.phone | replace('(', '') | replace(')', '') | replace(' ', '') | replace('-', '') }}" 
+       class="btn-primary"
+       data-track-phone data-company="{{ company.slug }}">
+      Call {{ company.phone }} →
+    </a>
+  </div>
+</section>
