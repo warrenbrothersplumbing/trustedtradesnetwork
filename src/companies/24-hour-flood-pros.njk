@@ -18,14 +18,24 @@ description: 24/7 emergency flood cleanup and water damage restoration — fast,
 
 <section class="py-12 lg:py-16 bg-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid md:grid-cols-3 gap-6 mb-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
       <a href="tel:{{ company.phone | replace('(', '') | replace(')', '') | replace(' ', '') | replace('-', '') }}" 
          class="card text-center hover:border-primary-500 border-2 border-transparent"
          data-track-phone data-company="{{ company.slug }}">
-        <span class="text-3xl mb-2 block">📞</span>
-        <h3 class="font-semibold text-gray-900">Call Now</h3>
+        <span class="text-3xl mb-2 block">🏠</span>
+        <h3 class="font-semibold text-gray-900">{{ company.phoneLabel or 'Call Now' }}</h3>
         <p class="text-primary-600">{{ company.phone }}</p>
       </a>
+      
+      {% if company.phone2 %}
+      <a href="tel:{{ company.phone2 | replace('(', '') | replace(')', '') | replace(' ', '') | replace('-', '') }}" 
+         class="card text-center hover:border-primary-500 border-2 border-transparent"
+         data-track-phone data-company="{{ company.slug }}">
+        <span class="text-3xl mb-2 block">�</span>
+        <h3 class="font-semibold text-gray-900">{{ company.phone2Label or 'Call Now' }}</h3>
+        <p class="text-primary-600">{{ company.phone2 }}</p>
+      </a>
+      {% endif %}
       
       <a href="{{ company.website }}" target="_blank" rel="noopener noreferrer" 
          class="card text-center hover:border-primary-500 border-2 border-transparent"
@@ -67,10 +77,19 @@ description: 24/7 emergency flood cleanup and water damage restoration — fast,
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 class="heading-elegant text-2xl font-bold mb-4">Ready to Get Started?</h2>
     <p class="text-primary-300 mb-8">Contact {{ company.name }} today for fast, reliable service.</p>
-    <a href="tel:{{ company.phone | replace('(', '') | replace(')', '') | replace(' ', '') | replace('-', '') }}" 
-       class="btn-primary"
-       data-track-phone data-company="{{ company.slug }}">
-      Call {{ company.phone }} →
-    </a>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="tel:{{ company.phone | replace('(', '') | replace(')', '') | replace(' ', '') | replace('-', '') }}" 
+         class="btn-primary"
+         data-track-phone data-company="{{ company.slug }}">
+        🏠 Homeowners: {{ company.phone }}
+      </a>
+      {% if company.phone2 %}
+      <a href="tel:{{ company.phone2 | replace('(', '') | replace(')', '') | replace(' ', '') | replace('-', '') }}" 
+         class="btn-outline border-white text-white hover:bg-white hover:text-primary-900"
+         data-track-phone data-company="{{ company.slug }}">
+        🔨 Contractors: {{ company.phone2 }}
+      </a>
+      {% endif %}
+    </div>
   </div>
 </section>
