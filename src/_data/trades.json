@@ -40,5 +40,11 @@
     "slug": "septic",
     "icon": "🚽",
     "description": "Septic system installation, pumping, and repairs"
+  },
+  {
+    "name": "Appliance Repair",
+    "slug": "appliance-repair",
+    "icon": "🔌",
+    "description": "Professional repair for washers, dryers, refrigerators, and more"
   }
 ]
